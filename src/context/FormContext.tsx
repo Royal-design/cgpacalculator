@@ -1,6 +1,6 @@
 import { createContext, ReactElement, useState } from "react";
 
-type formDataType = {
+export type formDataType = {
   courseCode1: string;
   courseCode2: string;
   courseCode3: string;
@@ -31,38 +31,7 @@ type formDataType = {
   score7: string;
 };
 
-type secondSemesterFormDataType = {
-  courseCode1: string;
-  courseCode2: string;
-  courseCode3: string;
-  courseCode4: string;
-  courseCode5: string;
-  courseCode6: string;
-  courseCode7: string;
-  unit1: string;
-  unit2: string;
-  unit3: string;
-  unit4: string;
-  unit5: string;
-  unit6: string;
-  unit7: string;
-  gradeUnit1: string;
-  gradeUnit2: string;
-  gradeUnit3: string;
-  gradeUnit4: string;
-  gradeUnit5: string;
-  gradeUnit6: string;
-  gradeUnit7: string;
-  score1: string;
-  score2: string;
-  score3: string;
-  score4: string;
-  score5: string;
-  score6: string;
-  score7: string;
-};
-
-const secondSemesterInitState: secondSemesterFormDataType = {
+const secondSemesterInitState: formDataType = {
   courseCode1: "",
   courseCode2: "",
   courseCode3: "",
@@ -126,10 +95,8 @@ const initState: formDataType = {
 
 type useDataFormContextType = {
   formData: formDataType;
-  secondSemesterFormData: secondSemesterFormDataType;
-  setSecondSemesterFormData: React.Dispatch<
-    React.SetStateAction<secondSemesterFormDataType>
-  >;
+  secondSemesterFormData: formDataType;
+  setSecondSemesterFormData: React.Dispatch<React.SetStateAction<formDataType>>;
   setFormData: React.Dispatch<React.SetStateAction<formDataType>>;
   handleChange: (e: any) => void;
   handleSecondSemesterChange: (e: any) => void;

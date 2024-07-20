@@ -1,191 +1,193 @@
 import { Box, HStack, Input } from "@chakra-ui/react";
-import { useFormContext } from "../context/useFormContext";
+import { formDataType } from "../context/FormContext";
 
-export const ItemList = () => {
-  const { formData, handleChange } = useFormContext();
-
+type PropsType = {
+  selectData: formDataType;
+  selectChange: (e: any) => void;
+};
+export const ItemList = ({ selectData, selectChange }: PropsType) => {
   return (
     <Box>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode1"
-          value={formData.courseCode1}
-          onChange={handleChange}
+          value={selectData.courseCode1}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit1}
+          value={selectData.unit1}
           name="unit1"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit1}
+          value={selectData.gradeUnit1}
           name="gradeUnit1"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score1"
-          value={formData.score1}
+          value={selectData.score1}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode2"
-          value={formData.courseCode2}
-          onChange={handleChange}
+          value={selectData.courseCode2}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit2}
+          value={selectData.unit2}
           name="unit2"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit2}
+          value={selectData.gradeUnit2}
           name="gradeUnit2"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score2"
-          value={formData.score2}
+          value={selectData.score2}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode3"
-          value={formData.courseCode3}
-          onChange={handleChange}
+          value={selectData.courseCode3}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit3}
+          value={selectData.unit3}
           name="unit3"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit3}
+          value={selectData.gradeUnit3}
           name="gradeUnit3"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score3"
-          value={formData.score3}
+          value={selectData.score3}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode4"
-          value={formData.courseCode4}
-          onChange={handleChange}
+          value={selectData.courseCode4}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit4}
+          value={selectData.unit4}
           name="unit4"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit4}
+          value={selectData.gradeUnit4}
           name="gradeUnit4"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score4"
-          value={formData.score4}
+          value={selectData.score4}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode5"
-          value={formData.courseCode5}
-          onChange={handleChange}
+          value={selectData.courseCode5}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit5}
+          value={selectData.unit5}
           name="unit5"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit5}
+          value={selectData.gradeUnit5}
           name="gradeUnit5"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score5"
-          value={formData.score5}
+          value={selectData.score5}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode6"
-          value={formData.courseCode6}
-          onChange={handleChange}
+          value={selectData.courseCode6}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit6}
+          value={selectData.unit6}
           name="unit6"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit6}
+          value={selectData.gradeUnit6}
           name="gradeUnit6"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score6"
-          value={formData.score6}
+          value={selectData.score6}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
       <HStack marginBottom={"0.5rem"}>
         <Input
           name="courseCode7"
-          value={formData.courseCode7}
-          onChange={handleChange}
+          value={selectData.courseCode7}
+          onChange={selectChange}
         />
         <Input
           type="number"
-          value={formData.unit7}
+          value={selectData.unit7}
           name="unit7"
-          onChange={handleChange}
+          onChange={selectChange}
         />
         <Input
-          value={formData.gradeUnit7}
+          value={selectData.gradeUnit7}
           name="gradeUnit7"
-          onChange={handleChange}
+          onChange={selectChange}
         />
 
         <Input
           type="number"
           name="score7"
-          value={formData.score7}
+          value={selectData.score7}
           min={"0"}
-          onChange={handleChange}
+          onChange={selectChange}
         ></Input>
       </HStack>
     </Box>

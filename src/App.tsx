@@ -14,7 +14,6 @@ import {
 
 import { ItemList } from "./components/ItemList";
 import { useFormContext } from "./context/useFormContext";
-import { ItemListSecondSemester } from "./components/ItemListSecondSemester";
 import { InputField } from "./components/InputField";
 
 function App() {
@@ -29,7 +28,11 @@ function App() {
     gradePoint,
     gpaResult,
     handleGPAClick,
-    handleSecondSemsterCGPAClick
+    handleSecondSemsterCGPAClick,
+    formData,
+    secondSemesterFormData,
+    handleChange,
+    handleSecondSemesterChange
   } = useFormContext();
 
   return (
@@ -44,30 +47,38 @@ function App() {
       >
         <Card
           width={{ md: "50%" }}
-          boxShadow={"0 0 1.2rem grey"}
+          boxShadow={{ md: "0 0 1.2rem grey" }}
           height={"48rem"}
         >
           <CardHeader>
             <Heading
               textAlign={"center"}
               fontSize={"1.4rem"}
-              marginBottom={"2rem"}
+              marginBottom={"0.5rem"}
             >
               CGPA Calculator
             </Heading>
-            <InputField />
           </CardHeader>
           <CardBody>
-            <SimpleGrid columns={4} spacing={5}>
-              <Text fontSize={"1rem"}>Course Code</Text>
-              <Text fontSize={"1rem"}>Units</Text>
-              <Text fontSize={"1rem"}>Grade</Text>
-              <Text fontSize={"1rem"}>Score</Text>
-            </SimpleGrid>
             <form>
+              <InputField />
+              <SimpleGrid columns={4} spacing={5}>
+                <Text fontSize={"1rem"}>Course Code</Text>
+                <Text fontSize={"1rem"}>Units</Text>
+                <Text fontSize={"1rem"}>Grade</Text>
+                <Text fontSize={"1rem"}>Score</Text>
+              </SimpleGrid>
+
               <FormControl>
-                {secondSemester === false && <ItemList />}
-                {secondSemester === true && <ItemListSecondSemester />}
+                {secondSemester === false && (
+                  <ItemList selectData={formData} selectChange={handleChange} />
+                )}
+                {secondSemester === true && (
+                  <ItemList
+                    selectData={secondSemesterFormData}
+                    selectChange={handleSecondSemesterChange}
+                  />
+                )}
 
                 <Flex marginTop={"3rem"} justifyContent={"center"}>
                   <Button
