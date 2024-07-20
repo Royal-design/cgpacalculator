@@ -45,7 +45,7 @@ function App() {
         <Card
           width={{ md: "50%" }}
           boxShadow={"0 0 1.2rem grey"}
-          height={"45rem"}
+          height={"48rem"}
         >
           <CardHeader>
             <Heading
@@ -88,7 +88,11 @@ function App() {
                     </Button>
                   )}
                 </Flex>
-                <Flex justifyContent={"space-between"} marginTop={"1rem"}>
+                <Box
+                  display={{ md: "flex" }}
+                  justifyContent={{ md: "space-between" }}
+                  marginTop={"1rem"}
+                >
                   <Text fontSize={"0.9rem"}>
                     Total Units:{" "}
                     {showCGPAResult ? totalNumberUnits : numberUnits}
@@ -100,7 +104,7 @@ function App() {
                   <Text fontSize={"0.9rem"}>
                     GPA: {showCGPAResult ? cgpaResult : gpaResult}
                   </Text>
-                </Flex>
+                </Box>
               </FormControl>
             </form>
           </CardBody>
