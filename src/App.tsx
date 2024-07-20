@@ -3,10 +3,12 @@ import {
   Button,
   Card,
   CardBody,
+  CardFooter,
   CardHeader,
   Flex,
   FormControl,
   Heading,
+  SimpleGrid,
   Text
 } from "@chakra-ui/react";
 
@@ -36,10 +38,15 @@ function App() {
         display={"flex"}
         justifyContent={"center"}
         width={"100%"}
+        height={"100%"}
         padding={{ base: "0.5rem", md: "3rem" }}
         background={{ md: "#758694" }}
       >
-        <Card width={{ md: "50%" }} boxShadow={"0 0 1.2rem grey"}>
+        <Card
+          width={{ md: "50%" }}
+          boxShadow={"0 0 1.2rem grey"}
+          height={"45rem"}
+        >
           <CardHeader>
             <Heading
               textAlign={"center"}
@@ -51,18 +58,18 @@ function App() {
             <InputField />
           </CardHeader>
           <CardBody>
-            <Flex justifyContent={"space-between"}>
-              <Text>Course Code</Text>
-              <Text>Units</Text>
-              <Text>Grade</Text>
-              <Text>Score</Text>
-            </Flex>
+            <SimpleGrid columns={4} spacing={5}>
+              <Text fontSize={"1rem"}>Course Code</Text>
+              <Text fontSize={"1rem"}>Units</Text>
+              <Text fontSize={"1rem"}>Grade</Text>
+              <Text fontSize={"1rem"}>Score</Text>
+            </SimpleGrid>
             <form>
               <FormControl>
                 {secondSemester === false && <ItemList />}
                 {secondSemester === true && <ItemListSecondSemester />}
 
-                <Flex justifyContent={"center"}>
+                <Flex marginTop={"3rem"} justifyContent={"center"}>
                   <Button
                     onClick={
                       secondSemester
@@ -81,20 +88,23 @@ function App() {
                     </Button>
                   )}
                 </Flex>
-                <Flex justifyContent={"space-between"}>
-                  <Text>
+                <Flex justifyContent={"space-between"} marginTop={"1rem"}>
+                  <Text fontSize={"0.9rem"}>
                     Total Units:{" "}
                     {showCGPAResult ? totalNumberUnits : numberUnits}
                   </Text>
-                  <Text>
+                  <Text fontSize={"0.9rem"}>
                     Total Grade Points:{" "}
                     {showCGPAResult ? totalGradePoints : gradePoint}
                   </Text>
-                  <Text>GPA: {showCGPAResult ? cgpaResult : gpaResult}</Text>
+                  <Text fontSize={"0.9rem"}>
+                    GPA: {showCGPAResult ? cgpaResult : gpaResult}
+                  </Text>
                 </Flex>
               </FormControl>
             </form>
           </CardBody>
+          <CardFooter></CardFooter>
         </Card>
       </Box>
     </>

@@ -2,16 +2,24 @@ import { Flex, FormControl, Input } from "@chakra-ui/react";
 
 export const InputField = () => {
   return (
-    <FormControl>
-      <Input name="name" placeholder=" your name" marginBottom={"1rem"} />
-      <Flex>
+    <form>
+      <FormControl>
         <Input
-          marginRight={"1rem"}
-          name="department"
-          placeholder=" department"
+          name="name"
+          placeholder=" your name"
+          marginBottom={"1rem"}
+          required
         />
-        <Input name="level" placeholder=" Level" width={"30%"} />
-      </Flex>
-    </FormControl>
+        <Flex>
+          <Input
+            marginRight={"1rem"}
+            name="department"
+            placeholder=" department"
+            required
+          />
+          <Input name="level" placeholder=" Level" width={"30%"} required />
+        </Flex>
+      </FormControl>
+    </form>
   );
 };

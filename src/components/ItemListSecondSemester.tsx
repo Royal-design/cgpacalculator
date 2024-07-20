@@ -12,6 +12,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.unit1}
           name="unit1"
           onChange={handleSecondSemesterChange}
@@ -37,6 +38,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.unit2}
           name="unit2"
           onChange={handleSecondSemesterChange}
@@ -62,6 +64,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.unit3}
           name="unit3"
           onChange={handleSecondSemesterChange}
@@ -73,7 +76,6 @@ export const ItemListSecondSemester = () => {
         />
 
         <Input
-          type="number"
           name="score3"
           value={secondSemesterFormData.score3}
           min={"0"}
@@ -87,6 +89,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.unit4}
           name="unit4"
           onChange={handleSecondSemesterChange}
@@ -117,6 +120,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.gradeUnit5}
           name="gradeUnit5"
           onChange={handleSecondSemesterChange}
@@ -137,6 +141,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.unit6}
           name="unit6"
           onChange={handleSecondSemesterChange}
@@ -162,6 +167,7 @@ export const ItemListSecondSemester = () => {
           onChange={handleSecondSemesterChange}
         />
         <Input
+          type="number"
           value={secondSemesterFormData.unit7}
           name="unit7"
           onChange={handleSecondSemesterChange}

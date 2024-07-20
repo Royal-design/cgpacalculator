@@ -12,7 +12,12 @@ export const ItemList = () => {
           value={formData.courseCode1}
           onChange={handleChange}
         />
-        <Input value={formData.unit1} name="unit1" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit1}
+          name="unit1"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit1}
           name="gradeUnit1"
@@ -33,7 +38,12 @@ export const ItemList = () => {
           value={formData.courseCode2}
           onChange={handleChange}
         />
-        <Input value={formData.unit2} name="unit2" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit2}
+          name="unit2"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit2}
           name="gradeUnit2"
@@ -54,7 +64,12 @@ export const ItemList = () => {
           value={formData.courseCode3}
           onChange={handleChange}
         />
-        <Input value={formData.unit3} name="unit3" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit3}
+          name="unit3"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit3}
           name="gradeUnit3"
@@ -75,7 +90,12 @@ export const ItemList = () => {
           value={formData.courseCode4}
           onChange={handleChange}
         />
-        <Input value={formData.unit4} name="unit4" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit4}
+          name="unit4"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit4}
           name="gradeUnit4"
@@ -96,7 +116,12 @@ export const ItemList = () => {
           value={formData.courseCode5}
           onChange={handleChange}
         />
-        <Input value={formData.unit5} name="unit5" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit5}
+          name="unit5"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit5}
           name="gradeUnit5"
@@ -117,7 +142,12 @@ export const ItemList = () => {
           value={formData.courseCode6}
           onChange={handleChange}
         />
-        <Input value={formData.unit6} name="unit6" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit6}
+          name="unit6"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit6}
           name="gradeUnit6"
@@ -138,7 +168,12 @@ export const ItemList = () => {
           value={formData.courseCode7}
           onChange={handleChange}
         />
-        <Input value={formData.unit7} name="unit7" onChange={handleChange} />
+        <Input
+          type="number"
+          value={formData.unit7}
+          name="unit7"
+          onChange={handleChange}
+        />
         <Input
           value={formData.gradeUnit7}
           name="gradeUnit7"
